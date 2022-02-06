@@ -7,13 +7,13 @@ library(sf)
 library(tidyverse)
 library(ggplot2)
 
-setwd("C:/Users/aaron/Downloads/shiny")
+setwd(".github/workflows")
 
 rsconnect::setAccountInfo(name='miguelmav3414',
                           token='F63E8E968694AB2228B3408E6EF7BCEF',
                           secret='ptXXYz7/jVWpaU2aFhD+muPyNpKcIaQ2qZzCEcN/')
 library(rsconnect)
-rsconnect::deployApp("C:/Users/aaron/Downloads/shiny", appName = "test")
+rsconnect::deployApp(".github/workflows", appName = "test")
 ##################################################################
 #Problem 3_ with 2 input functions, Toggle Major_streets
 
