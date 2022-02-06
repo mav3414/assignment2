@@ -74,13 +74,13 @@ ui <- fluidPage(
 server <- function(input, output) {
   output$dist <- renderImage({ 
     if (input$dist == "1_5") {
-      src <- "www/parrestonefive.png"
+      src <- "workflows/parrestonefive.png"
     } else if (input$dist == "6_9_22") {
-      src <- "www/pqarrestn6_9.png"
+      src <- "workflows/pqarrestn6_9.png"
     }else if (input$dist == "10_14") {
-      src <- "www/pqarrestS10_14.png"
+      src <- "workflows/pqarrestS10_14.png"
     }else if (input$dist == "15_21") {
-      src <- "www/parrestsfiftwo.png"
+      src <- "workflows/parrestsfiftwo.png"
     }
   
     list(src = src,
@@ -88,14 +88,14 @@ server <- function(input, output) {
   }, deleteFile = FALSE)
   output$streets <- renderImage({ 
     if (input$streets == "streets") {
-      src <- "www/merged2.png"
+      src <- "workflows/merged2.png"
     } else if (input$streets == "nostreet") {
-      src <- "www/my_arrestmap.png"
+      src <- "workflows/my_arrestmap.png"
     } 
     list(src = src,
          width = "80%")
   }, deleteFile = FALSE)
-  
+
 }
 
 shinyApp(ui = ui, server = server)
